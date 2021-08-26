@@ -12,7 +12,13 @@ This Python script copies only jpg and png files from inside all of these direct
 
 ## Usage
 
-Run it with python and point it to where the result of the extraction done by PhotoRec is located.
+The Pillow library is needed:
+
+```bash
+pip3 install Pillow
+```
+
+Run the script with python and point it to where the result of the extraction done by PhotoRec is located.
 
 For example:
 
