@@ -132,9 +132,12 @@ class RPO:
         self._images_count = len(result_images) - self._thumbs_count
 
     def _is_image_thumbnail(self, img_path):
-        img = Image.open(img_path)
-        w,h = img.size
-        return w <= self._thumbs_width
+        try:
+            img = Image.open(img_path)
+            w,h = img.size
+            return w <= self._thumbs_width
+        except Exception as err:
+            return False
 
 if __name__ == "__main__":
    RPO(sys.argv)
